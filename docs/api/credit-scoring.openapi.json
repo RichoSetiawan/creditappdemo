@@ -37,7 +37,8 @@
                   "value": {
                     "applicant": {
                       "full_name": "Budi Santoso",
-                      "phone_number": "08123456789"
+                      "phone_number": "08123456789",
+                      "email": "contoh@gmail.com"
                     },
                     "financial": {
                       "monthly_income": 8500000,
@@ -57,7 +58,8 @@
                   "value": {
                     "applicant": {
                       "fullName": "Budi Santoso",
-                      "phone": "08123456789"
+                      "phone": "08123456789",
+                      "email": "contoh@gmail.com"
                     },
                     "financial": {
                       "monthlyIncome": 8500000,
@@ -161,10 +163,11 @@
         "properties": {
           "applicant": {
             "type": "object",
-            "required": ["full_name", "phone_number"],
+            "required": ["full_name", "phone_number", "email"],
             "properties": {
               "full_name": { "type": "string" },
-              "phone_number": { "type": "string" }
+              "phone_number": { "type": "string" },
+              "email": { "type": "string" }
             }
           },
           "financial": {
@@ -204,10 +207,11 @@
         "properties": {
           "applicant": {
             "type": "object",
-            "required": ["fullName", "phone"],
+            "required": ["fullName", "phone", "email"],
             "properties": {
               "fullName": { "type": "string" },
-              "phone": { "type": "string" }
+              "phone": { "type": "string" },
+              "email": { "type": "string" }
             }
           },
           "financial": {

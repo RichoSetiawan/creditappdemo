@@ -35,6 +35,7 @@ Mapping ke konsep README Aegira: data nasabah mirip **customer** (`full_name`, `
 |--------|---------------------|------|------------|
 | `applicant` | `full_name` | string | Nama lengkap |
 | | `phone_number` | string | Telepon |
+| | `email` | string | Email |
 | `financial` | `monthly_income` | number | Penghasilan bulanan (IDR) |
 | | `monthly_expense` | number | Opsional; default `0` |
 | | `existing_installment` | number | Setara total cicilan/utang bulanan di form demo |
@@ -49,7 +50,8 @@ Mapping ke konsep README Aegira: data nasabah mirip **customer** (`full_name`, `
 {
   "applicant": {
     "full_name": "Budi Santoso",
-    "phone_number": "08123456789"
+    "phone_number": "08123456789",
+    "email": "contoh@gamil.com"
   },
   "financial": {
     "monthly_income": 8500000,

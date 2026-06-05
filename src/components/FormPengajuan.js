@@ -20,6 +20,11 @@ export function renderFormPengajuan(applicant) {
             value="${safe(applicant.phone)}" placeholder="08xxxxxxxxxx" />
         </div>
         <div class="field">
+          <label for="phone">Email</label>
+          <input id="email" name="email" type="tel" inputmode="tel" autocomplete="tel" required
+            value="${safe(applicant.email)}" placeholder="contoh@gmail.com" />
+        </div>
+        <div class="field">
           <label for="monthlyIncome">Penghasilan bulanan (Rp)</label>
           <input id="monthlyIncome" name="monthlyIncome" type="number" min="0" step="100000" required
             value="${safe(applicant.monthlyIncome)}" placeholder="5000000" />
@@ -45,7 +50,7 @@ export function renderFormPengajuan(applicant) {
             <option value="lainnya" ${applicant.purpose === 'lainnya' ? 'selected' : ''}>Lainnya</option>
           </select>
         </div>
-        <div class="field">
+        <div class="field mb-16">
           <label for="paymentHistory">Riwayat pembayaran (kartu/kredit lain)</label>
           <select id="paymentHistory" name="paymentHistory">
             <option value="sangat_baik" ${applicant.paymentHistory === 'sangat_baik' ? 'selected' : ''}>Sangat baik — jarang telat</option>
@@ -71,6 +76,7 @@ export function attachFormPengajuan(container, store) {
       applicant: {
         fullName: String(fd.get('fullName') || '').trim(),
         phone: String(fd.get('phone') || '').trim(),
+        email: String(fd.get('email') || '').trim(),
         monthlyIncome: fd.get('monthlyIncome'),
         monthlyDebt: fd.get('monthlyDebt'),
         loanAmount: fd.get('loanAmount'),

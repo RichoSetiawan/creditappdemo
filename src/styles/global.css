@@ -116,7 +116,7 @@ body {
 }
 
 .field:last-of-type {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 label {
